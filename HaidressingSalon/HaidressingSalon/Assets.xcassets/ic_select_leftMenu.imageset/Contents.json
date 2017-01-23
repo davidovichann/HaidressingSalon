@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "filename" : "selectMenu1px.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "selectMenu2px.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "selectMenu3px.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

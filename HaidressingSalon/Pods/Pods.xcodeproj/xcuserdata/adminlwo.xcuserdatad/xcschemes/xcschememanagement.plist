@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-HaidressingSalon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HaidressingSalonTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HaidressingSalonUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>17A27E58AFAB6C57E9A1B9A9F8D9F99B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DDCC91B8B5986E469D928E09FA36854</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>935E9254649148AAFF00330C23BD548B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E27D730B12174F44313F4F0B6D8A3EA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

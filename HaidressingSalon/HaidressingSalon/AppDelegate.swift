@@ -7,15 +7,33 @@
 //
 
 import UIKit
+import RESideMenu
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RESideMenuDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard : UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let navVC : NavigationController = NavigationController.init()
+//        instantiateViewController(withIdentifier: "navVC")
+        let navVC : NavigationController = storyboard.instantiateViewController(withIdentifier: "navVC") as! NavigationController
+        
+        let leftVC : LeftViewController = storyboard.instantiateViewController(withIdentifier: "leftVC") as! LeftViewController
+        
+        let sideMenuVC : RESideMenu = RESideMenu.init(contentViewController: navVC, leftMenuViewController: leftVC, rightMenuViewController: nil)
+        
+        sideMenuVC.delegate = self
+
+        window?.rootViewController = sideMenuVC
+        
+        sideMenuVC.presentLeftMenuViewController()
+        
+        
         return true
     }
 
@@ -41,6 +59,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    //MARK: RESideMenu Delegate
+    
+    func sideMenu(_ sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
+        print("willShowMenuViewController: %@", menuViewController)
+    }
+    
+    func sideMenu(_ sideMenu: RESideMenu!, didShowMenuViewController menuViewController: UIViewController!) {
+        print("didShowMenuViewController: %@", menuViewController)
+    }
+    
+    func sideMenu(_ sideMenu: RESideMenu!, willHideMenuViewController menuViewController: UIViewController!) {
+        print("willHideMenuViewController: %@", menuViewController)
+    }
+    
+    func sideMenu(_ sideMenu: RESideMenu!, didHideMenuViewController menuViewController: UIViewController!) {
+        print("didHideMenuViewController: %@", menuViewController)
+    }
 }
 

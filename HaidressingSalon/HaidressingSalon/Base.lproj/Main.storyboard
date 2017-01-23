@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EM7-8N-DeK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ufonts.com_abadi-mt-condensed-extra-bold.ttf">
+            <string>AbadiMT-CondensedExtraBold</string>
+        </array>
+        <array key="ufonts.com_abadi-mt-condensed-light.ttf">
+            <string>AbadiMT-CondensedLight</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="S2S-vf-NmZ">
+            <objects>
+                <navigationController storyboardIdentifier="navVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EM7-8N-DeK" customClass="NavigationController" customModule="HaidressingSalon" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hUW-BP-HhP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.70588235294117641" green="0.82352941176470584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2jH-Qp-G9P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcq-nY-umV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1649" y="106"/>
+        </scene>
+        <!--Side View Controller-->
+        <scene sceneID="mlt-al-D5u">
+            <objects>
+                <viewController storyboardIdentifier="resideVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xXE-cl-Xka" customClass="RESideViewController" customModule="HaidressingSalon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2uT-gc-bB9"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgV-i9-VNt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TSa-iU-zlU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNa-fp-fla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3328" y="104"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="Zgm-JZ-bDx">
+            <objects>
+                <viewController storyboardIdentifier="leftVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YTn-uj-rCc" customClass="LeftViewController" customModule="HaidressingSalon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ij3-Y0-V7x"/>
+                        <viewControllerLayoutGuide type="bottom" id="DYu-b4-Ea1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0M4-GZ-07W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-i9-W2M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YTn-uj-rCc" id="j9l-ED-7y0"/>
+                                    <outlet property="delegate" destination="YTn-uj-rCc" id="NYv-HE-WBv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6b8-i9-W2M" firstAttribute="leading" secondItem="0M4-GZ-07W" secondAttribute="leading" id="Dzu-F1-vUm"/>
+                            <constraint firstAttribute="trailing" secondItem="6b8-i9-W2M" secondAttribute="trailing" id="Ng6-dQ-IM1"/>
+                            <constraint firstItem="6b8-i9-W2M" firstAttribute="top" secondItem="0M4-GZ-07W" secondAttribute="top" id="UgJ-ye-VEX"/>
+                            <constraint firstItem="DYu-b4-Ea1" firstAttribute="top" secondItem="6b8-i9-W2M" secondAttribute="bottom" id="bq8-Ca-Yil"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6b8-i9-W2M" id="ykg-Pd-O3Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ia-a0-iry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2554.4000000000001" y="105.69715142428787"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="ZVd-5k-bE5">
+            <objects>
+                <viewController storyboardIdentifier="contentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lr6-sQ-KS6" customClass="ContentViewController" customModule="HaidressingSalon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJe-x2-E7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZIZ-GT-Pk4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8NV-lF-nYy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A66-Wy-glD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2554" y="-621"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="HaidressingSalon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +120,180 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_backTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Y64-xd-LHS">
+                                <rect key="frame" x="114.5" y="80" width="146" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="GU3-Sh-Qpb"/>
+                                    <constraint firstAttribute="width" constant="146" id="iY1-B9-CXh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWK-a8-OIp">
+                                <rect key="frame" x="5" y="40" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ppD-WD-Oza"/>
+                                    <constraint firstAttribute="height" constant="30" id="tUg-FT-9zk"/>
+                                </constraints>
+                                <state key="normal" image="ic_leftMenu"/>
+                                <connections>
+                                    <action selector="didPressLeftMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILf-rU-Laz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESw-yQ-fDG">
+                                <rect key="frame" x="106.5" y="345" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.98039215686274506" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="cIU-DN-g0J"/>
+                                    <constraint firstAttribute="height" constant="40" id="vHZ-Yb-7Fs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbadiMT-CondensedExtraBold" family="Abadi MT Condensed Extra Bold" pointSize="17"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-Dk-1rw">
+                                <rect key="frame" x="106.5" y="405" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.98039215686274506" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="EIR-1w-J2z"/>
+                                    <constraint firstAttribute="height" constant="40" id="s60-hA-gCD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbadiMT-CondensedExtraBold" family="Abadi MT Condensed Extra Bold" pointSize="17"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-jp-ewE">
+                                <rect key="frame" x="106" y="465" width="162" height="40"/>
+                                <color key="backgroundColor" white="0.17729393407802455" alpha="0.93000000000000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WA9-T3-2k8"/>
+                                    <constraint firstAttribute="width" constant="162" id="fJU-pz-nwv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbadiMT-CondensedExtraBold" family="Abadi MT Condensed Extra Bold" pointSize="17"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.89803921568627454" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HWZ-Dk-1rw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="63U-jE-OeI"/>
+                            <constraint firstItem="wWK-a8-OIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="6Nx-78-H4h"/>
+                            <constraint firstItem="Y64-xd-LHS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="8PR-Q2-sXn"/>
+                            <constraint firstItem="HWZ-Dk-1rw" firstAttribute="top" secondItem="ESw-yQ-fDG" secondAttribute="bottom" constant="20" id="CDM-dd-soX"/>
+                            <constraint firstItem="Y64-xd-LHS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GS3-BC-A55"/>
+                            <constraint firstItem="hrt-jp-ewE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P4w-IP-ZAY"/>
+                            <constraint firstItem="ESw-yQ-fDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGh-28-X5w"/>
+                            <constraint firstItem="wWK-a8-OIp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ymc-A8-6Xa"/>
+                            <constraint firstItem="hrt-jp-ewE" firstAttribute="top" secondItem="HWZ-Dk-1rw" secondAttribute="bottom" constant="20" id="nIn-fz-QAK"/>
+                            <constraint firstItem="ESw-yQ-fDG" firstAttribute="top" secondItem="Y64-xd-LHS" secondAttribute="bottom" constant="100" id="ngd-cN-Nvr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YWy-JU-kcF"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="leftMenu" destination="wWK-a8-OIp" id="Rw4-Ix-Moo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-687.20000000000005" y="105.69715142428787"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DMa-fj-p5Z">
+            <objects>
+                <viewController id="f0y-Xc-qyF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNT-6b-OZ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="6GW-1g-eff"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hG1-z6-rb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-WR-3d9">
+                                <rect key="frame" x="68" y="124" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HnO-89-M0C"/>
+                                    <constraint firstAttribute="width" constant="238" id="wtM-ob-qJ0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1oq-cv-6s3">
+                                <rect key="frame" x="68" y="184" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="MUV-Hw-LDe"/>
+                                    <constraint firstAttribute="height" constant="30" id="uCU-Rp-kki"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyG-Cn-n8Z">
+                                <rect key="frame" x="106" y="309" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.98039215690000003" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6aS-wr-dPa"/>
+                                    <constraint firstAttribute="width" constant="162" id="Foz-WH-tPp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbadiMT-CondensedExtraBold" family="Abadi MT Condensed Extra Bold" pointSize="17"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the login and password." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyX-sX-6uH">
+                                <rect key="frame" x="10" y="94" width="355" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="A6b-Um-8MM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbadiMT-CondensedLight" family="Abadi MT Condensed Light" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.89803921568627454" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1oq-cv-6s3" firstAttribute="top" secondItem="dbV-WR-3d9" secondAttribute="bottom" constant="30" id="Xgt-aw-tbH"/>
+                            <constraint firstItem="lyG-Cn-n8Z" firstAttribute="centerX" secondItem="hG1-z6-rb6" secondAttribute="centerX" id="Zaw-f1-Eme"/>
+                            <constraint firstItem="dbV-WR-3d9" firstAttribute="centerX" secondItem="hG1-z6-rb6" secondAttribute="centerX" id="dgV-JZ-49E"/>
+                            <constraint firstItem="MyX-sX-6uH" firstAttribute="top" secondItem="dNT-6b-OZ8" secondAttribute="bottom" constant="30" id="eAE-Kl-TJm"/>
+                            <constraint firstItem="MyX-sX-6uH" firstAttribute="leading" secondItem="hG1-z6-rb6" secondAttribute="leading" constant="10" id="lvW-Jb-DAb"/>
+                            <constraint firstItem="lyG-Cn-n8Z" firstAttribute="top" secondItem="1oq-cv-6s3" secondAttribute="bottom" constant="95" id="pcl-gk-slx"/>
+                            <constraint firstAttribute="trailing" secondItem="MyX-sX-6uH" secondAttribute="trailing" constant="10" id="ser-N9-13r"/>
+                            <constraint firstItem="1oq-cv-6s3" firstAttribute="centerX" secondItem="hG1-z6-rb6" secondAttribute="centerX" id="z6c-qd-BgU"/>
+                            <constraint firstItem="dbV-WR-3d9" firstAttribute="top" secondItem="MyX-sX-6uH" secondAttribute="bottom" constant="10" id="zdU-RH-dKE"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDv-V8-032" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687.20000000000005" y="821.73913043478262"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FyU-iI-Tq4">
+            <objects>
+                <viewController id="YYX-lw-4Yf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ata-xH-UPN"/>
+                        <viewControllerLayoutGuide type="bottom" id="LVc-Ap-lHX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b8t-el-dCw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kw1-W0-U3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="818"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_backTitle" width="146" height="165"/>
+        <image name="ic_leftMenu" width="64" height="64"/>
+    </resources>
 </document>
